@@ -1,94 +1,278 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <title>Classyads Ads</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="./icon.png" />
-  <script src="script.js"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description"
+    content="ClassyMall — Premium shopping experience. Discover the latest trends, deals, and curated collections." />
+  <title>ClassyMall — Discover the Latest Trends</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Inter:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="topnav-links">
-    <h1 class="classyads"> Classyads</h1>
-    <div class="header-nave">
-      <div>Home</div>
-      <div>Ads</div>
-      <div>About</div>
-      <div>Blog</div>
-      <div>Contact</div>
-      <div>Log In</div>
-      <div>Register</div>
-      <div class="post">+ Post an Ad</div>
+  <header class="nav-wrap">
+    <nav class="nav container" id="navbar" role="navigation" aria-label="Main navigation">
+      <a class="logo" href="#home">ClassyMall</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#shop">Shop</a></li>
+        <li><a href="#categories">Categories</a></li>
+        <li><a href="#deals">Deals</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="search-inline" role="search">
+          <input type="search" placeholder="Search products" aria-label="Search products">
+        </div>
+        <button class="icon" aria-label="Cart">🛒<span class="badge" id="cartCount">0</span></button>
+        <button class="icon" aria-label="Profile">👤</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero-full" id="home" aria-label="Hero">
+      <div class="hero-bg"
+        style="background-image:url('https://images.unsplash.com/photo-1520975918809-0a79c57b1bd2?auto=format&fit=crop&w=1820&q=80')">
+      </div>
+      <div class="hero-inner container">
+        <div class="hero-left">
+          <h1 class="hero-title">Discover the Latest Trends</h1>
+          <p class="hero-sub">Shop premium fashion, electronics and home goods — curated collections, fast delivery.</p>
+
+          <form class="search-advanced" role="search">
+            <div class="search-row">
+              <input id="q" name="q" type="search" placeholder="Search for Nike, iPhone, sofas...">
+              <select id="cat" name="cat">
+                <option>All categories</option>
+                <option>Fashion</option>
+                <option>Electronics</option>
+                <option>Home</option>
+              </select>
+              <button class="btn primary" type="submit">Search</button>
+            </div>
+            <div class="trending">Trending: <a href="#">Nike Air</a> · <a href="#">iPhone 15</a> · <a href="#">Designer
+                Bags</a></div>
+          </form>
+
+          <div class="float-stats">
+            <div class="stat"><span class="num" data-target="10000000">0</span><small>Listings</small></div>
+            <div class="stat"><span class="num" data-target="500000">0</span><small>Users</small></div>
+            <div class="stat"><span class="num" data-target="100">0</span><small>Cities</small></div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="device-mock">
+            <div class="screen"><img
+                src="https://images.unsplash.com/photo-1526178612542-0a6d5ae4b40a?auto=format&fit=crop&w=800&q=80"
+                alt="product showcase"></div>
+            <div class="floating-card">50% OFF · Flash Sale</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORIES -->
+    <section id="categories" class="section container">
+      <h2 class="section-title">Popular Categories</h2>
+      <div class="bento-grid">
+        <a class="bento large" href="#">
+          <img src="https://images.unsplash.com/photo-1520975918809-0a79c57b1bd2?auto=format&fit=crop&w=1200&q=80"
+            alt="Fashion">
+          <div class="meta">
+            <h3>Fashion</h3><span>12,345 listings</span>
+          </div>
+        </a>
+        <a class="bento" href="#"><img
+            src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+            alt="Electronics">
+          <div class="meta">
+            <h4>Electronics</h4><span>8,542</span>
+          </div>
+        </a>
+        <a class="bento" href="#"><img
+            src="https://images.unsplash.com/photo-1582582494702-6b9f5e2f4f6e?auto=format&fit=crop&w=800&q=80"
+            alt="Furniture">
+          <div class="meta">
+            <h4>Furniture</h4><span>5,212</span>
+          </div>
+        </a>
+        <a class="bento" href="#"><img
+            src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?auto=format&fit=crop&w=800&q=80"
+            alt="Beauty">
+          <div class="meta">
+            <h4>Beauty</h4><span>3,102</span>
+          </div>
+        </a>
+        <a class="bento" href="#"><img
+            src="https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=800&q=80"
+            alt="Sports">
+          <div class="meta">
+            <h4>Sports</h4><span>2,901</span>
+          </div>
+        </a>
+        <a class="bento" href="#"><img
+            src="https://images.unsplash.com/photo-1506806732259-39c2d0268443?auto=format&fit=crop&w=800&q=80"
+            alt="Grocery">
+          <div class="meta">
+            <h4>Grocery</h4><span>1,439</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- TRENDING PRODUCTS -->
+    <section id="shop" class="section container">
+      <div class="section-title">Trending Products</div>
+      <div class="featured-grid">
+        <article class="listing">
+          <div class="thumb"><img
+              src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=800&q=80"
+              alt="Nike"></div>
+          <div class="content">
+            <h3>Nike Air Max</h3>
+            <div class="meta">Sneakers · <span class="rating">⭐ 4.9</span></div>
+            <div class="price">$199 <small class="old">$249</small></div>
+          </div>
+          <button class="wish" aria-pressed="false">♡</button>
+        </article>
+
+        <article class="listing">
+          <div class="thumb"><img
+              src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?auto=format&fit=crop&w=800&q=80"
+              alt="iPhone"></div>
+          <div class="content">
+            <h3>iPhone Pro</h3>
+            <div class="meta">Electronics · <span class="rating">⭐ 4.8</span></div>
+            <div class="price">$999 <small class="old">$1099</small></div>
+          </div>
+          <button class="wish" aria-pressed="false">♡</button>
+        </article>
+
+        <article class="listing">
+          <div class="thumb"><img
+              src="https://images.unsplash.com/photo-1519744792095-2f2205e87b6f?auto=format&fit=crop&w=800&q=80"
+              alt="Smartwatch"></div>
+          <div class="content">
+            <h3>Smart Watch S</h3>
+            <div class="meta">Wearables · <span class="rating">⭐ 4.7</span></div>
+            <div class="price">$249 <small class="old">$299</small></div>
+          </div>
+          <button class="wish" aria-pressed="false">♡</button>
+        </article>
+      </div>
+    </section>
+
+    <!-- FLASH SALE -->
+    <section id="deals" class="flash section container">
+      <div class="flash-inner">
+        <div class="flash-left">
+          <h2>Flash Sale — 50% OFF</h2>
+          <p>Limited-time offers across top categories.</p>
+          <div class="countdown" id="countdown">00:00:00</div>
+        </div>
+        <div class="flash-right">
+          <div class="deal-card"><img
+              src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=1200&q=80"
+              alt="promo">
+            <div class="info">
+              <h4>Summer Essentials</h4>
+              <p class="price">From $19 <span class="old">$39</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews" class="section container">
+      <h2 class="section-title">What Customers Say</h2>
+      <div class="test-grid">
+        <div class="review"><img class="avatar"
+            src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80"
+            alt="avatar">
+          <blockquote>"Amazing quality and fast delivery."</blockquote><cite>— Anna</cite>
+        </div>
+        <div class="review"><img class="avatar"
+            src="https://images.unsplash.com/photo-1545996124-1f1b0b9e2e5d?auto=format&fit=crop&w=200&q=80"
+            alt="avatar">
+          <blockquote>"Premium shopping experience."</blockquote><cite>— Mark</cite>
+        </div>
+        <div class="review"><img class="avatar"
+            src="https://images.unsplash.com/photo-1541823704831-4b7b2b34a2e8?auto=format&fit=crop&w=200&q=80"
+            alt="avatar">
+          <blockquote>"Great customer support."</blockquote><cite>— Olivia</cite>
+        </div>
+      </div>
+    </section>
+
+    <!-- BRANDS -->
+    <section id="brands" class="section container">
+      <h2 class="section-title">Trusted By</h2>
+      <div class="brands-marquee" aria-hidden>
+        <img src="https://images.unsplash.com/photo-1542223616-1b0c5b5b9d0b?auto=format&fit=crop&w=300&q=80"
+          alt="brand"><img
+          src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=300&q=80"
+          alt="brand"><img
+          src="https://images.unsplash.com/photo-1542744094-24638eff58bb?auto=format&fit=crop&w=300&q=80"
+          alt="brand"><img
+          src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?auto=format&fit=crop&w=300&q=80"
+          alt="brand">
+      </div>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section id="newsletter" class="section container newsletter-premium">
+      <div class="newsletter-inner">
+        <div>
+          <h2>Be first to know about deals</h2>
+          <p>Subscribe for exclusive offers and early access.</p>
+        </div>
+        <form id="newsletterForm" class="newsletter-form"><input type="email" placeholder="Your email address"
+            required><button class="btn primary" type="submit">Subscribe</button></form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="f-about"><a class="logo" href="#">ClassyMall</a>
+        <p>Premium shopping — curated collections & secure checkout.</p>
+      </div>
+      <div class="f-links">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+      </div>
+      <div class="f-links">
+        <h4>Support</h4>
+        <ul>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Shipping</a></li>
+          <li><a href="#">Returns</a></li>
+        </ul>
+      </div>
+      <div class="f-links">
+        <h4>Follow</h4>
+        <div class="socials"> <a>🐦</a> <a>📘</a> <a>📸</a></div>
+      </div>
     </div>
-  </div>
+    <div class="container copyright">© <span id="year"></span> ClassyMall. All rights reserved.</div>
+  </footer>
 
-  <section class="content">
-    <h1>Largest Classifieds In The World</h1>
-    <p>You can buy, sell anything you want.</p>
-
-    <form class="search-form">
-      <input type="text" placeholder="What are you looking for?" />
-      <input type="text" placeholder="Location" />
-      <select>
-        <option>All Categories</option>
-        <option>Category 1</option>
-      </select>
-      <button type="submit">Search</button>
-    </form>
-  </section>
-
-  <section class="categories">
-    <div class="category-box">
-      <div class="category-item">
-        <img src="real estate.png" alt="Real Estate">
-        <h3>Real Estate</h3>
-        <span class="badge">3,921</span>
-      </div>
-      <div class="category-item">
-        <img src="Book and magazine.jpg" alt="Books & Magazines">
-        <h3>Books & Magazines</h3>
-        <span class="badge">398</span>
-      </div>
-      <div class="category-item">
-        <img src="furniture.png" alt="Furniture">
-        <h3>Furniture</h3>
-        <span class="badge">1,229</span>
-      </div>
-      <div class="category-item">
-        <img src="Electronics.jpg" alt="Electronics">
-        <h3>Electronics</h3>
-        <span class="badge">32,891</span>
-      </div>
-      <div class="category-item">
-        <img src="car.png" alt="Cars & Vehicles">
-        <h3>Cars & Vehicles</h3>
-        <span class="badge">29,221</span>
-      </div>
-      <div class="category-item">
-        <img src="others.png" alt="Other">
-        <h3>Other</h3>
-        <span class="badge">219</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="featured-ads">
-    <h2>Featured Ads</h2>
-    <div class="featured-ads-images">
-      <img src="fish.jpg" />
-      <img src="fake.jpg" />
-      <img src="store.avif" />
-      <img src="opener-w-Bugatti-3.avif" />
-      <img src="real estate.png" />
-      <img src="fakes.webp" />
-    </div>
-  </section>
-
-  <div footer="footer">
-    <p class="copy">&copy; 2025 Your Company Name. All Rights Reserved.</p>
-  </div>
-
+  <script src="script.js" defer></script>
 </body>
 
 </html>
